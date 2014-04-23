@@ -82,11 +82,10 @@ public class ChatServer {
 				dataOutputStream.writeUTF(string);
 			} catch (SocketException e) {
 				System.out.println("send()" + this.toString());
-				clients.remove(this); // remove the closed client from the
-				// list of clients!
-				// e.printStackTrace();
+				clients.remove(this); 
+	
 			} catch (IOException e) {
-				// TODO: handle exception
+	
 				e.printStackTrace();
 			}
 		}
